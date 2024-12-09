@@ -10,7 +10,6 @@ for(let i=0; i<noOfBtns; i++)
         
         
 function soun() {
-        this.style.color= "yellow" ; //changes the style of the button clicked
         var b1n= this.innerHTML;
         soundmaker(b1n);
         btnAnimation(b1n);
@@ -85,9 +84,11 @@ function soun() {
         var activeBtn = document.querySelector("." + currentkey);
 
         activeBtn.classList.add("pressed");
+        activeBtn.style.color= "yellow" ;
 
         setTimeout( function() {
             activeBtn.classList.remove("pressed");
+            activeBtn.style.color= "" ;
         },100);
 
     }
